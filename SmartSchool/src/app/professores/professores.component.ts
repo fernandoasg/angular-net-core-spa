@@ -9,6 +9,8 @@ export class ProfessoresComponent implements OnInit {
 
     public titulo = "Professores"
 
+    public professorSelecionado: string | undefined;
+
     public professores = [
         { id: 1, nome: "Arlindo", disciplina: 'Matemática' },
         { id: 2, nome: "Abigaiu", disciplina: 'Física' },
@@ -19,6 +21,14 @@ export class ProfessoresComponent implements OnInit {
         { id: 7, nome: "Sancho Pança", disciplina: 'História' },
     ]
 
+    professorSelect(professor: any) {
+        this.professorSelecionado = professor.nome;
+    }
+
+    voltar() {
+        this.professorSelecionado = '';
+    }
+    
     constructor() { }
 
     ngOnInit() {
