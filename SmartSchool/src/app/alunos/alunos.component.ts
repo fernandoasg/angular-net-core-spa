@@ -9,6 +9,8 @@ export class AlunosComponent implements OnInit {
 
     public titulo = 'Alunos';
 
+    public alunoSelecionado: string | undefined;
+
     public alunos = [
         { id: 1, nome: 'Amanda', sobrenome: 'Kent', telefone: 321321, },
         { id: 2, nome: 'Fernando', sobrenome: 'Augusto', telefone: 159159, },
@@ -18,6 +20,14 @@ export class AlunosComponent implements OnInit {
         { id: 6, nome: 'Older', sobrenome: 'Young', telefone: 658658, },
         { id: 7, nome: 'Wilson', sobrenome: 'Afonso', telefone: 656565, }
     ]
+
+    alunoSelect(aluno: any) {
+        this.alunoSelecionado = aluno.nome;
+    }
+
+    voltar() {
+        this.alunoSelecionado = '';
+    }
 
     constructor() { }
 
