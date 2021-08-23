@@ -12,6 +12,8 @@ export class AlunosComponent implements OnInit {
 
     public alunoSelecionado: Aluno | null | undefined;
 
+    public textoSimples: string | undefined;
+
     public alunos = [
         { id: 1, nome: 'Amanda', sobrenome: 'Kent', telefone: 321321, },
         { id: 2, nome: 'Fernando', sobrenome: 'Augusto', telefone: 159159, },
